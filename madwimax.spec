@@ -1,4 +1,3 @@
-%define distsuffix edm
 Name: madwimax
 Version: 0.1.1
 Release: %mkrel 1
@@ -21,10 +20,16 @@ MadWimax is a driver for the wimax device Samsung SWC U200.
 make
 
 %install
+rm -rf %{buildroot}
+
 %__install -dm 755 $RPM_BUILD_ROOT/etc/udev/rules.d
 make install DESTDIR=$RPM_BUILD_ROOT
 
+%clean
+rm -rf %{buildroot}
+
 %files
+%defattr(-, root, root, 0755)
 %doc COPYING README
 /etc/madwimax/*
 /etc/udev/rules.d/*
@@ -32,7 +37,3 @@ make install DESTDIR=$RPM_BUILD_ROOT
 /usr/sbin/*
 /usr/share/man/man8/*
 #/usr/src/debug/madwimax-0.1.1/src/*
-
-%clean
-rm -rf $RPM_BUILD_ROOT
-
