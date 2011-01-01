@@ -5,10 +5,9 @@ Summary: madwimax userspace driver
 License: GPL
 Group: Networking/Other
 Requires: libusb1.0_0
-BuildRequires: libusb1.0-devel asciidoc docbook2x
+BuildRequires: %{_lib}usb1.0-devel asciidoc docbook2x
 Source: %{name}-%{version}.tar.bz2
 BuildRoot: %{_tmppath}/%{name}-%{version}-buildroot
-BuildArch:	i586
 
 %description
 MadWimax is a driver for the wimax device Samsung SWC U200.
