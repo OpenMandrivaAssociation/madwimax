@@ -1,13 +1,11 @@
 Name: madwimax
 Version: 0.1.1
-Release: %mkrel 1
+Release: 2
 Summary: madwimax userspace driver
-License: GPL
+License: GPLv2+
 Group: Networking/Other
-Requires: libusb1.0_0
-BuildRequires: %{_lib}usb1.0-devel asciidoc docbook2x
-Source: %{name}-%{version}.tar.bz2
-BuildRoot: %{_tmppath}/%{name}-%{version}-buildroot
+BuildRequires: pkgconfig(libusb-1.0) asciidoc docbook2x
+Source0: %{name}-%{version}.tar.bz2
 
 %description
 MadWimax is a driver for the wimax device Samsung SWC U200.
@@ -16,17 +14,12 @@ MadWimax is a driver for the wimax device Samsung SWC U200.
 %setup -q
 
 %build
-%configure --prefix=/usr
+%configure --prefix=%{_prefix}
 make
 
 %install
-rm -rf %{buildroot}
-
-%__install -dm 755 $RPM_BUILD_ROOT/etc/udev/rules.d
-make install DESTDIR=$RPM_BUILD_ROOT
-
-%clean
-rm -rf %{buildroot}
+%__install -dm 755 %{buildroot}/etc/udev/rules.d
+%makeinstall_std
 
 %files
 %defattr(-, root, root, 0755)
