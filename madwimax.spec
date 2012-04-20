@@ -14,7 +14,7 @@ MadWimax is a driver for the wimax device Samsung SWC U200.
 %setup -q
 
 %build
-%configure --prefix=%{_prefix}
+%configure
 make
 
 %install
@@ -26,7 +26,5 @@ make
 %doc COPYING README
 /etc/madwimax/*
 /etc/udev/rules.d/*
-#/usr/lib/debug/usr/sbin/*
 /usr/sbin/*
 /usr/share/man/man8/*
-#/usr/src/debug/madwimax-0.1.1/src/*
