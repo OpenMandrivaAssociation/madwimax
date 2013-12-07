@@ -1,6 +1,6 @@
 Name: madwimax
 Version: 0.1.1
-Release: 3
+Release: 4
 Summary: madwimax userspace driver
 License: GPLv2+
 Group: Networking/Other
