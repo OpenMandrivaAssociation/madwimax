@@ -25,7 +25,7 @@ make
 %defattr(-, root, root, 0755)
 %doc COPYING README
 /etc/madwimax/*
-/etc/udev/rules.d/*
+#/etc/udev/rules.d/*
 /usr/sbin/*
 /usr/share/man/man8/*
 
