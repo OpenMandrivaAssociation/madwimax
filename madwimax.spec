@@ -25,18 +25,6 @@ make
 %defattr(-, root, root, 0755)
 %doc COPYING README
 /etc/madwimax/*
-#/etc/udev/rules.d/*
+/etc/udev/rules.d/*madwimax.rules
 /usr/sbin/*
 /usr/share/man/man8/*
-
-
-%changelog
-* Sat Jan 01 2011 Александр Казанцев <kazancas@mandriva.org> 0.1.1-1mdv2011.0
-+ Revision: 627109
-- initial release
-- import madwimax
-
-
-* Sun Apr 16 2010 Ángel Jiménez Álvaro <a.jimenez@upm.es>
-- Packaged to Blogdrake Repository
-
