@@ -4,6 +4,11 @@ Release: 17
 Summary: madwimax userspace driver
 License: GPLv2+
 Group: Networking/Other
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires: pkgconfig(libusb-1.0) asciidoc docbook2x
 Source0: %{name}-%{version}.tar.bz2
 
